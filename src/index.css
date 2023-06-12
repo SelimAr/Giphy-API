@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .input {
+        @apply w-full rounded-bl-md rounded-tl-lg px-1 text-lg outline-0 font-medium bg-white bg-opacity-40 text-white
+        placeholder:text-white focus:ring-white focus:ring-1
+    }
+    .button {
+        @apply flex items-center text-white bg-black p-1 rounded-br-md
+    }
+    .modal {
+        @apply m-auto fixed inset-0 p-5 bg-black bg-opacity-70 flex max-w-7xl justify-center items-center flex-wrap rounded-md
+        max-mobile-l:p-0
+    }
+    .close {
+        @apply top-0 right-0 absolute m-5 text-white cursor-pointer max-mobile-l:m-1
+    }
+    .results {
+        @apply text-white text-4xl font-semibold max-mobile-l:text-2xl bg-black p-2 rounded-md mb-1 max-mobile-l:mb-0
+     }
+    .content {
+        @apply flex justify-center items-end flex-wrap overflow-auto max-h-[55em] max-laptop-m:max-h-[37em] max-mobile-l:max-h-[39em]
+         
+    }
+    .gifs {
+        @apply rounded-md w-auto max-mobile-l:h-24 
+    }
+    .url {
+        @apply text-white bg-white bg-opacity-10 p-1 rounded-md mt-2 flex items-center text-base max-mobile-l:text-xs
+        font-semibold hover:bg-white hover:bg-opacity-20
+    }
+    .error {
+        @apply text-2xl font-normal text-red-500 border border-red-500 p-2 rounded-md fixed inset-x-0 w-fit h-fit m-auto
+         translate-y-28 max-mobile-l:text-sm max-mobile-l:translate-y-8 max-laptop-m:translate-y-5
+    }
+}
+
+body{
+    background-color: #000;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
